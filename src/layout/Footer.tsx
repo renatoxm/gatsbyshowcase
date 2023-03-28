@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
                     <h2>
                       Let's get <br /> to work
                     </h2>
-                    <a className="rn-button-style--2" href="/contact">
+                    <a className="rn-button-style--2" href="#">
                       <span>Contact Us</span>
                     </a>
                   </div>
@@ -41,13 +41,13 @@ const Footer: React.FC = () => {
                         <h4>Quick Link</h4>
                         <ul className="ft-link">
                           <li>
-                            <a href="/portfolio">Work</a>
+                            <a href="#">Work</a>
                           </li>
                           <li>
-                            <a href="/about">About</a>
+                            <a href="#">About</a>
                           </li>
                           <li>
-                            <a href="/contact">Let's Talk</a>
+                            <a href="#">Let's Talk</a>
                           </li>
                         </ul>
                       </div>
