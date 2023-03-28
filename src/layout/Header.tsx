@@ -9,35 +9,47 @@ interface HeaderProps {
 class Header extends Component<HeaderProps> {
   constructor(props: HeaderProps) {
     super(props);
+    const isBrowser = typeof window !== "undefined";
     this.menuTrigger = this.menuTrigger.bind(this);
     this.CLoseMenuTrigger = this.CLoseMenuTrigger.bind(this);
-    //  this.subMetuTrigger = this.subMetuTrigger.bind(this);
-    window.addEventListener('load', function () {
-      console.log('All assets are loaded');
-    });
+    
+    if(isBrowser){
+      window.addEventListener('load', function () {
+        console.log('All assets are loaded');
+      });
+    }
   }
 
+  
   menuTrigger() {
+    if (typeof window === "undefined") {
+      return;
+    }
     document.querySelector('.header-wrapper')?.classList.toggle('menu-open');
   }
 
   CLoseMenuTrigger() {
+    if (typeof window === "undefined") {
+      return;
+    }
     document.querySelector('.header-wrapper')?.classList.remove('menu-open');
   }
 
   render() {
-    const elements = document.querySelectorAll(
-      '.has-droupdown > a'
-    ) as NodeListOf<HTMLElement>;
-    for (const i in elements) {
-      // if (elements.hasOwnProperty(i)) {
-      if (Object.prototype.hasOwnProperty.call(elements, i)) {
-        elements[i].onclick = () => {
-          elements[i].parentElement
-            ?.querySelector('.submenu')
-            ?.classList.toggle('active');
-          elements[i].classList.toggle('open');
-        };
+    if (typeof window !== "undefined") {
+      const elements = document.querySelectorAll(
+        '.has-droupdown > a'
+      ) as NodeListOf<HTMLElement>;
+      for (const i in elements) {
+        // if (elements.hasOwnProperty(i)) {
+        if (Object.prototype.hasOwnProperty.call(elements, i)) {
+          elements[i].onclick = () => {
+            elements[i].parentElement
+              ?.querySelector('.submenu')
+              ?.classList.toggle('active');
+            elements[i].classList.toggle('open');
+          };
+        }
       }
     }
     const { logo, color = 'default-color' } = this.props;
