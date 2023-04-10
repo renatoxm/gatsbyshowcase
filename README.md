@@ -9,6 +9,39 @@ This is a sample Gatsby landing page in Typescript with Bootstrap 5, GraphQL and
 
 This project was created only as a portfolio showcase, just the landing page works.
 
-***Notes:***
+## Features
 
-- Testimonial Component sources data from data/testimonials.json using GraphQL
+- [x] Gatsby 5
+- [x] React 18
+- [x] TypeScript
+- [x] Bootstrap 5
+- [x] ESLint
+- [x] Prettier — Code Formatter for consistent style
+- [ ] Husky
+- [ ] Commitlint
+- [ ] lint-staged
+- [ ] Jest testing
+
+## Gatsby Features
+
+- [x] Blog contents
+- [x] Blog Pagination
+- [ ] Responsive Images
+- [ ] Blog Search <https://www.dolthub.com/blog/2021-11-29-gatsby-search-and-pagination/>
+
+## Install the project
+
+```sh
+# npm
+npm i
+```
+
+## Running
+
+To start the project locally, run:
+
+```sh
+npm run develop
+```
+
+Open `http://localhost:8000` with your browser to see the result.

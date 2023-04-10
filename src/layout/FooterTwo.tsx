@@ -1,17 +1,18 @@
-import React from 'react';
+import React from 'react'
+import { Link } from 'gatsby'
 import {
   FaTwitter,
   FaInstagram,
   FaFacebookF,
   FaLinkedinIn,
-} from 'react-icons/fa';
+} from 'react-icons/fa'
 
 const SocialShare = [
   { Social: <FaFacebookF />, link: 'https://www.facebook.com/' },
   { Social: <FaLinkedinIn />, link: 'https://www.linkedin.com/' },
   { Social: <FaInstagram />, link: 'https://www.instagram.com/' },
   { Social: <FaTwitter />, link: 'https://twitter.com/' },
-];
+]
 
 const FooterTwo = () => {
   return (
@@ -24,9 +25,9 @@ const FooterTwo = () => {
           <div className="col-lg-4 col-md-6 col-sm-6 col-12">
             <div className="inner">
               <div className="logo text-center text-sm-left mb_sm--20">
-                <a href="/home-one">
+                <Link to="/">
                   <img src="/images/logo/logo.png" alt="Logo images" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -44,13 +45,19 @@ const FooterTwo = () => {
           <div className="col-lg-4 col-md-12 col-sm-12 col-12">
             <div className="inner text-lg-right text-center mt_md--20 mt_sm--20">
               <div className="text">
-                <p>Copyright © 2023 Tear1devs. All Rights Reserved.</p>
+                <p>
+                  {' '}
+                  This is a Showcase Project from{' '}
+                  <a href="https://renato.digital" target="_blank">
+                    Renato Nabinger.
+                  </a>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
-};
-export default FooterTwo;
+  )
+}
+export default FooterTwo

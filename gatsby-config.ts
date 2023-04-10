@@ -2,7 +2,7 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `gatsbytypescript`,
+    title: `Gatsblog`,
     siteUrl: `https://www.yourdomain.tld`
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
@@ -14,7 +14,7 @@ const config: GatsbyConfig = {
     options: {
       "icon": "src/images/icon.png"
     }
-  }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+  }, "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
@@ -39,6 +39,19 @@ const config: GatsbyConfig = {
     resolve: 'gatsby-transformer-json',
     options: {
       typeName: 'data'
+    }
+  }, {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      "name": "posts",
+      "path": "./src/posts/"
+    },
+    __key: "posts"
+  },{
+    resolve: 'gatsby-plugin-mdx',
+    options: {
+      "name": "posts",
+      "path": "./src/posts/"
     }
   }]
 };

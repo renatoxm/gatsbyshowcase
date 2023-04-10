@@ -1,25 +1,25 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 const ServiceList = [
   {
     icon: '01',
-    title: 'Business Stratagy',
+    title: 'Fully responsible',
     description:
       'There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
   },
   {
     icon: '02',
-    title: 'Website Development',
+    title: 'Best Practices',
     description:
       'There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
   },
   {
     icon: '03',
-    title: 'Marketing & Reporting',
+    title: 'Super Fast',
     description:
       'There are many variations of passages of Lorem Ipsum available, but the majority have suffered.',
   },
-];
+]
 
 class ServiceOne extends Component {
   render() {
@@ -44,7 +44,7 @@ class ServiceOne extends Component {
           ))}
         </div>
       </>
-    );
+    )
   }
 }
-export default ServiceOne;
+export default ServiceOne

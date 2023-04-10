@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import Slider from 'react-slick';
-import { portfolioSlick2 } from '../components/slideConfig';
+import React, { Component } from 'react'
+import Slider from 'react-slick'
+import { portfolioSlick2 } from '../components/slideConfig'
 
 const PortfolioList = [
   {
@@ -33,13 +33,13 @@ const PortfolioList = [
     category: 'Development',
     title: ' Getting tickets to the big show',
   },
-];
+]
 
 class Portfolio extends Component {
   render() {
-    const title = 'Our Works',
+    const title = 'Our Work',
       description =
-        'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.';
+        'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.'
     return (
       <>
         <div className="portfolio-wrapper">
@@ -65,23 +65,23 @@ class Portfolio extends Component {
                     <div className="inner">
                       <p>{value.category}</p>
                       <h4 className="title">
-                        <a href="/portfolio-details">{value.title}</a>
+                        <a href="#">{value.title}</a>
                       </h4>
                       <div className="portfolio-button">
-                        <a className="rn-btn" href="/portfolio-details">
+                        <a className="rn-btn" href="#">
                           Case Study
                         </a>
                       </div>
                     </div>
                   </div>
-                  <a className="link-overlay" href="/portfolio-details"></a>
+                  <a className="link-overlay" href="#"></a>
                 </div>
               ))}
             </Slider>
           </div>
         </div>
       </>
-    );
+    )
   }
 }
-export default Portfolio;
+export default Portfolio

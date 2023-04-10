@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { FiCast, FiLayers, FiUsers, FiMonitor } from 'react-icons/fi';
+import React, { Component } from 'react'
+import { FiCast, FiLayers, FiUsers, FiMonitor } from 'react-icons/fi'
 
 const ServiceList = [
   {
     icon: <FiCast />,
-    title: 'Business Stratagy',
+    title: 'Business Strategy',
     description:
       'I throw myself down among the tall grass by the stream as I lie close to the earth.',
   },
@@ -26,13 +26,13 @@ const ServiceList = [
     description:
       'I throw myself down among the tall grass by the stream as I lie close to the earth.',
   },
-];
+]
 
 class ServiceTwo extends Component {
   render() {
     const title = 'Services',
       description =
-        'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.';
+        'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.'
     return (
       <>
         <div className="row">
@@ -66,7 +66,7 @@ class ServiceTwo extends Component {
           </div>
         </div>
       </>
-    );
+    )
   }
 }
-export default ServiceTwo;
+export default ServiceTwo
