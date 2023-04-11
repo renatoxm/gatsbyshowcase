@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 
 class About extends Component {
   render() {
     const title = 'About',
       description =
-        'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum,';
+        'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum,'
     return (
       <>
         <div className="about-wrapper">
@@ -12,9 +13,10 @@ class About extends Component {
             <div className="row row--35 align-items-center">
               <div className="col-lg-5 col-md-12">
                 <div className="thumbnail">
-                  <img
+                  <StaticImage
                     className="w-100"
-                    src="/images/about/about-1.jpg"
+                    placeholder="blurred"
+                    src="../images/about/about-1.jpg"
                     alt="About Images"
                   />
                 </div>
@@ -52,7 +54,7 @@ class About extends Component {
           </div>
         </div>
       </>
-    );
+    )
   }
 }
-export default About;
+export default About

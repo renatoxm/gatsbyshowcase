@@ -32,7 +32,7 @@ const config: GatsbyConfig = {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "data",
-      "path": "./src/data/",
+      "path": "./src/data/portfolio/",
       ignore: ["`**/\.*"]
     }
   }, {

@@ -17,16 +17,16 @@ This project was created only as a portfolio showcase, just the landing page wor
 - [x] Bootstrap 5
 - [x] ESLint
 - [x] Prettier — Code Formatter for consistent style
+- [ ] Jest unit testing <https://www.gatsbyjs.com/docs/how-to/testing/unit-testing/>
 - [ ] Husky
 - [ ] Commitlint
 - [ ] lint-staged
-- [ ] Jest testing
 
 ## Gatsby Features
 
 - [x] Blog contents
 - [x] Blog Pagination
-- [ ] Responsive Images
+- [x] Responsive Images (static & dynamic) <https://www.gatsbyjs.com/plugins/gatsby-plugin-image>
 - [ ] Blog Search <https://www.dolthub.com/blog/2021-11-29-gatsby-search-and-pagination/>
 
 ## Install the project

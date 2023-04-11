@@ -1,71 +1,57 @@
-import React, { Component } from 'react'
+import * as React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import Slider from 'react-slick'
 import { portfolioSlick2 } from '../components/slideConfig'
 
-const PortfolioList = [
-  {
-    image: 'image-1',
-    category: 'Development',
-    title: ' Getting tickets to the big show',
-  },
-  {
-    image: 'image-2',
-    category: 'Development',
-    title: ' Getting tickets to the big show',
-  },
-  {
-    image: 'image-3',
-    category: 'Development',
-    title: ' Getting tickets to the big show',
-  },
-  {
-    image: 'image-4',
-    category: 'Development',
-    title: ' Getting tickets to the big show',
-  },
-  {
-    image: 'image-3',
-    category: 'Development',
-    title: ' Getting tickets to the big show',
-  },
-  {
-    image: 'image-4',
-    category: 'Development',
-    title: ' Getting tickets to the big show',
-  },
-]
+const Portfolio = () => {
+  const data = useStaticQuery(graphql`
+    query MyQuery {
+      allData {
+        nodes {
+          id
+          image
+          category
+          title
+        }
+      }
+    }
+  `)
 
-class Portfolio extends Component {
-  render() {
-    const title = 'Our Work',
-      description =
-        'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.'
-    return (
-      <>
-        <div className="portfolio-wrapper">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-6">
-                <div className="section-title">
-                  <h2>{title}</h2>
-                  <p>{description}</p>
-                </div>
+  const title = 'Our Work',
+    description =
+      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.'
+  return (
+    <>
+      <div className="portfolio-wrapper">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="section-title">
+                <h2>{title}</h2>
+                <p>{description}</p>
               </div>
             </div>
           </div>
-          <div className="portfolio-slick-activation mt--70 mt_sm--40">
-            <Slider {...portfolioSlick2}>
-              {PortfolioList.map((value, index) => (
-                <div className="portfolio" key={index}>
+        </div>
+        <div className="portfolio-slick-activation mt--70 mt_sm--40">
+          <Slider {...portfolioSlick2}>
+            {data.allData.nodes.map(
+              (node: {
+                id: number
+                image: string
+                category: string
+                title: string
+              }) => (
+                <div className="portfolio" key={node.id}>
                   <div className="thumbnail-inner">
-                    <div className={`thumbnail ${value.image}`}></div>
-                    <div className={`bg-blr-image ${value.image}`}></div>
+                    <div className={`thumbnail ${node.image}`}></div>
+                    <div className={`bg-blr-image ${node.image}`}></div>
                   </div>
                   <div className="content">
                     <div className="inner">
-                      <p>{value.category}</p>
+                      <p>{node.category}</p>
                       <h4 className="title">
-                        <a href="#">{value.title}</a>
+                        <a href="#">{node.title}</a>
                       </h4>
                       <div className="portfolio-button">
                         <a className="rn-btn" href="#">
@@ -76,12 +62,12 @@ class Portfolio extends Component {
                   </div>
                   <a className="link-overlay" href="#"></a>
                 </div>
-              ))}
-            </Slider>
-          </div>
+              )
+            )}
+          </Slider>
         </div>
-      </>
-    )
-  }
+      </div>
+    </>
+  )
 }
 export default Portfolio

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "image": "image-1",
+    "category": "Gatsby",
+    "title": " Sourcing Json Files with GraphQL"
+  },
+  {
+    "id": 2,
+    "image": "image-2",
+    "category": "Gatsby",
+    "title": " This is a external post"
+  },
+  {
+    "id": 3,
+    "image": "image-3",
+    "category": "UI/UX",
+    "title": " Optimizing images"
+  },
+  {
+    "id": 4,
+    "image": "image-4",
+    "category": "Development",
+    "title": " Are you ready for Gatsby 5?"
+  },
+  {
+    "id": 5,
+    "image": "image-3",
+    "category": "Gatsby",
+    "title": " Deployment with AWS"
+  },
+  {
+    "id": 6,
+    "image": "image-4",
+    "category": "Development",
+    "title": " Another title example"
+  }
+]
