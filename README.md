@@ -21,13 +21,16 @@ This project was created only as a portfolio showcase, just the landing page wor
 - [ ] Husky
 - [ ] Commitlint
 - [ ] lint-staged
+- [ ] DataDog
 
 ## Gatsby Features
 
 - [x] Blog contents
 - [x] Blog Pagination
 - [x] Responsive Images (static & dynamic) <https://www.gatsbyjs.com/plugins/gatsby-plugin-image>
-- [ ] Blog Search <https://www.dolthub.com/blog/2021-11-29-gatsby-search-and-pagination/>
+- [x] Blog Search using JS Search (In 'posts' page)
+- [ ] Responsive Background Images
+- [ ] Forms
 
 ## Install the project
 

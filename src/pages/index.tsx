@@ -30,6 +30,7 @@ interface BlogPost {
     image: string
     comments: string
     date: Date
+    excerpt: string
   }
 }
 

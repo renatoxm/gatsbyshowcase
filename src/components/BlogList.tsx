@@ -11,6 +11,7 @@ interface BlogPost {
     bgimage: string
     image: string
     comments: string
+    excerpt: string
     date: Date
   }
 }

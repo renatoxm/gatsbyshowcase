@@ -4,6 +4,7 @@ import { graphql, PageProps } from 'gatsby'
 import Breadcrumb from '../components/Breadcrumb'
 import Pagination from '../components/Pagination'
 import BlogList from '../components/BlogList'
+import Search from '../components/Search'
 import Layout from '../layout'
 
 interface PageTemplateProps extends Omit<PageProps, 'children'> {
@@ -34,6 +35,7 @@ export default function PageTemplate(props: PageTemplateProps) {
       {/* Start Breadcrump Area */}
       <Breadcrumb title={'Blog List'} />
       {/* End Breadcrump Area */}
+      <Search />
 
       {/* Start Blog Area */}
       <div className="rn-blog-area ptb--120 bg_color--1">

@@ -19,6 +19,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             title
             date
             category
+            excerpt
           }
           internal {
             contentFilePath
