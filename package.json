@@ -4,6 +4,7 @@
   "private": true,
   "description": "gatsblog",
   "author": "Renato Nabinger",
+  "license": "MIT",
   "keywords": [
     "gatsby"
   ],
@@ -37,6 +38,7 @@
     "gatsby-plugin-manifest": "^5.8.0",
     "gatsby-plugin-mdx": "^5.8.0",
     "gatsby-plugin-page-creator": "^5.8.0",
+    "gatsby-plugin-pnpm": "1.2.10",
     "gatsby-plugin-sass": "^6.8.0",
     "gatsby-plugin-sharp": "^5.8.0",
     "gatsby-plugin-sitemap": "^6.8.0",
