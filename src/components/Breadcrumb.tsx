@@ -22,7 +22,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ title, parent }) => {
                   <li className="breadcrumb-item">
                     <Link to="/">Home</Link>
                   </li>
-                  {parent ? <li className="breadcrumb-item">{parent}</li> : ''}
+                  {parent ? <li className="breadcrumb-item">{parent}</li> : ``}
                   <li className="breadcrumb-item active">{title}</li>
                 </ul>
               </div>

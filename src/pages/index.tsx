@@ -11,14 +11,6 @@ import Testimonial from '../components/Testimonial'
 import Portfolio from '../components/Portfolio'
 import BlogList from '../components/BlogList'
 
-interface Props {
-  data: {
-    allMdx: {
-      nodes: BlogPost[]
-    }
-  }
-}
-
 interface BlogPost {
   id: string
   frontmatter: {
@@ -31,6 +23,14 @@ interface BlogPost {
     comments: string
     date: Date
     excerpt: string
+  }
+}
+
+interface Props {
+  data: {
+    allMdx: {
+      nodes: BlogPost[]
+    }
   }
 }
 

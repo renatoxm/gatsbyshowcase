@@ -7,14 +7,6 @@ import BlogList from '../components/BlogList'
 import Search from '../components/Search'
 import Layout from '../layout'
 
-interface PageTemplateProps extends Omit<PageProps, 'children'> {
-  data: {
-    allMdx: {
-      nodes: BlogPost[]
-    }
-  }
-}
-
 interface BlogPost {
   id: string
   frontmatter: {
@@ -29,11 +21,19 @@ interface BlogPost {
   }
 }
 
+interface PageTemplateProps extends Omit<PageProps, 'children'> {
+  data: {
+    allMdx: {
+      nodes: BlogPost[]
+    }
+  }
+}
+
 export default function PageTemplate(props: PageTemplateProps) {
   return (
     <Layout>
       {/* Start Breadcrump Area */}
-      <Breadcrumb title={'Blog List'} />
+      <Breadcrumb title={`Blog List`} />
       {/* End Breadcrump Area */}
       <Search />
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import { FiX, FiMenu } from 'react-icons/fi'
 import { Link } from 'gatsby'
 
@@ -7,60 +7,61 @@ interface HeaderProps {
   color?: string
 }
 
-class Header extends Component<HeaderProps> {
+class Header extends React.Component<HeaderProps> {
   constructor(props: HeaderProps) {
     super(props)
-    const isBrowser = typeof window !== 'undefined'
+    const isBrowser = typeof window !== `undefined`
     this.menuTrigger = this.menuTrigger.bind(this)
     this.CLoseMenuTrigger = this.CLoseMenuTrigger.bind(this)
 
     if (isBrowser) {
-      window.addEventListener('load', function () {
-        console.log('All assets are loaded')
+      window.addEventListener(`load`, function () {
+        console.log(`All assets are loaded`)
       })
     }
   }
 
   menuTrigger() {
-    if (typeof window === 'undefined') {
+    if (typeof window === `undefined`) {
       return
     }
-    document.querySelector('.header-wrapper')?.classList.toggle('menu-open')
+    document.querySelector(`.header-wrapper`)?.classList.toggle(`menu-open`)
   }
 
   CLoseMenuTrigger() {
-    if (typeof window === 'undefined') {
+    if (typeof window === `undefined`) {
       return
     }
-    document.querySelector('.header-wrapper')?.classList.remove('menu-open')
+    document.querySelector(`.header-wrapper`)?.classList.remove(`menu-open`)
   }
 
   render() {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== `undefined`) {
       const elements = document.querySelectorAll(
-        '.has-droupdown > a'
+        `.has-droupdown > a`
+        // eslint-disable-next-line no-undef
       ) as NodeListOf<HTMLElement>
       for (const i in elements) {
         // if (elements.hasOwnProperty(i)) {
         if (Object.prototype.hasOwnProperty.call(elements, i)) {
           elements[i].onclick = () => {
             elements[i].parentElement
-              ?.querySelector('.submenu')
-              ?.classList.toggle('active')
-            elements[i].classList.toggle('open')
+              ?.querySelector(`.submenu`)
+              ?.classList.toggle(`active`)
+            elements[i].classList.toggle(`open`)
           }
         }
       }
     }
-    const { logo, color = 'default-color' } = this.props
+    const { logo, color = `default-color` } = this.props
     let logoUrl
-    if (logo === 'light') {
+    if (logo === `light`) {
       logoUrl = <img src="/images/logo/logo-light.png" alt="Gatsblog" />
-    } else if (logo === 'dark') {
+    } else if (logo === `dark`) {
       logoUrl = <img src="/images/logo/logo-dark.png" alt="Gatsblog" />
-    } else if (logo === 'symbol-dark') {
+    } else if (logo === `symbol-dark`) {
       logoUrl = <img src="/images/logo/logo-symbol-dark.png" alt="Gatsblog" />
-    } else if (logo === 'symbol-light') {
+    } else if (logo === `symbol-light`) {
       logoUrl = <img src="/images/logo/logo-symbol-light.png" alt="Gatsblog" />
     } else {
       logoUrl = <img src="/images/logo/logo.png" alt="Gatsblog" />

@@ -16,6 +16,7 @@
     "clean": "gatsby clean",
     "postinstall": "husky install",
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
+    "lint-fix": "eslint --fix --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
     "test": "jest"
   },

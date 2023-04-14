@@ -8,10 +8,10 @@ import {
 import { Link } from 'gatsby'
 
 const SocialShare = [
-  { Social: <FaFacebookF />, link: 'https://www.facebook.com/' },
-  { Social: <FaLinkedinIn />, link: 'https://www.linkedin.com/' },
-  { Social: <FaInstagram />, link: 'https://www.instagram.com/' },
-  { Social: <FaTwitter />, link: 'https://twitter.com/' },
+  { Social: <FaFacebookF />, link: `https://www.facebook.com/` },
+  { Social: <FaLinkedinIn />, link: `https://www.linkedin.com/` },
+  { Social: <FaInstagram />, link: `https://www.instagram.com/` },
+  { Social: <FaTwitter />, link: `https://twitter.com/` },
 ]
 
 const Footer: React.FC = () => {
@@ -25,12 +25,13 @@ const Footer: React.FC = () => {
                 <div className="inner">
                   <span>Ready To Do This?</span>
                   <h2>
-                    Let's get <br /> to work
+                    Let&apos;s get <br /> to work
                   </h2>
                   <a
                     className="rn-button-style--2"
                     href="https://renato.digital"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <span>Contact</span>
                   </a>
@@ -52,7 +53,11 @@ const Footer: React.FC = () => {
                           <Link to="/posts">Posts</Link>
                         </li>
                         <li>
-                          <a href="https://renato.digital" target="_blank">
+                          <a
+                            href="https://renato.digital"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             Contact
                           </a>
                         </li>
@@ -91,8 +96,12 @@ const Footer: React.FC = () => {
                   <div className="col-lg-12">
                     <div className="copyright-text">
                       <p>
-                        This is a Showcase Project from{' '}
-                        <a href="https://renato.digital" target="_blank">
+                        This is a Showcase Project from{` `}
+                        <a
+                          href="https://renato.digital"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           Renato Nabinger.
                         </a>
                       </p>

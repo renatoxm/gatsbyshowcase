@@ -1,4 +1,4 @@
-import { Settings } from 'react-slick';
+import { Settings } from 'react-slick'
 
 export const portfolioSlick: Settings = {
   dots: true,
@@ -19,7 +19,7 @@ export const portfolioSlick: Settings = {
       },
     },
   ],
-};
+}
 
 export const portfolioSlick2: Settings = {
   infinite: true,
@@ -59,7 +59,7 @@ export const portfolioSlick2: Settings = {
       },
     },
   ],
-};
+}
 
 export const slickDot: Settings = {
   infinite: true,
@@ -93,7 +93,7 @@ export const slickDot: Settings = {
       },
     },
   ],
-};
+}
 
 export const slideSlick: Settings = {
   infinite: true,
@@ -102,9 +102,9 @@ export const slideSlick: Settings = {
   dots: true,
   arrows: true,
   fade: true,
-  easing: 'fade',
+  easing: `fade`,
   adaptiveHeight: true,
-};
+}
 
 export const innerPageDemo: Settings = {
   infinite: true,
@@ -132,7 +132,7 @@ export const innerPageDemo: Settings = {
       },
     },
   ],
-};
+}
 
 export const testimonialActivation: Settings = {
   infinite: true,
@@ -161,4 +161,4 @@ export const testimonialActivation: Settings = {
       },
     },
   ],
-};
+}

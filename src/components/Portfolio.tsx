@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Slider from 'react-slick'
 import { portfolioSlick2 } from '../components/slideConfig'
 
-const Portfolio = () => {
+const Portfolio: React.FC = () => {
   const data = useStaticQuery(graphql`
     query MyQuery {
       allData {
@@ -17,9 +17,8 @@ const Portfolio = () => {
     }
   `)
 
-  const title = 'Our Work',
-    description =
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.'
+  const title = `Our Work`
+  const description = `There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.`
   return (
     <>
       <div className="portfolio-wrapper">

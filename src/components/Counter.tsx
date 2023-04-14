@@ -1,34 +1,33 @@
-import React, { Component } from 'react';
-import CountUp from 'react-countup';
-import { InView } from 'react-intersection-observer';
+import * as React from 'react'
+import CountUp from 'react-countup'
+import { InView } from 'react-intersection-observer'
 
-class CounterOne extends Component {
+class CounterOne extends React.Component {
   state = {
     didViewCountUp: false,
-  };
+  }
+
   onVisibilityChange = (inView: boolean) => {
     if (inView) {
-      this.setState({ didViewCountUp: true });
+      this.setState({ didViewCountUp: true })
     }
-  };
+  }
+
   render() {
     const Data = [
       {
         countNum: 199,
-        countTitle:
-          'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.',
+        countTitle: `The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.`,
       },
       {
         countNum: 575,
-        countTitle:
-          'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.',
+        countTitle: `The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.`,
       },
       {
         countNum: 69,
-        countTitle:
-          'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.',
+        countTitle: `The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.`,
       },
-    ];
+    ]
 
     return (
       <>
@@ -39,7 +38,7 @@ class CounterOne extends Component {
               key={index}
             >
               <h5 className="counter">
-                <InView onChange={(inView) => this.onVisibilityChange(inView)}>
+                <InView onChange={inView => this.onVisibilityChange(inView)}>
                   <CountUp
                     end={this.state.didViewCountUp ? value.countNum : 0}
                   />
@@ -50,7 +49,7 @@ class CounterOne extends Component {
           ))}
         </div>
       </>
-    );
+    )
   }
 }
-export default CounterOne;
+export default CounterOne

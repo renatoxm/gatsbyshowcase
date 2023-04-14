@@ -13,10 +13,10 @@ const Pagination: React.FC<Props> = ({ pageContext }) => {
 
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
-  const prev = currentPage === 2 ? '/posts' : `/posts/page/${currentPage - 1}`
+  const prev = currentPage === 2 ? `/posts` : `/posts/page/${currentPage - 1}`
   const next = currentPage + 1
 
-  //const start = getStart(currentPage, numPages)
+  // const start = getStart(currentPage, numPages)
   const start = 1
   const nums = Array.from({ length: numPages }).map((_, i) => i + start)
 
@@ -31,8 +31,8 @@ const Pagination: React.FC<Props> = ({ pageContext }) => {
           </li>
         )}
         {nums.map(num => (
-          <li key={num} className={num === currentPage ? 'active' : ''}>
-            <Link to={num === 1 ? '/posts' : `/posts/page/${num}`}>{num}</Link>
+          <li key={num} className={num === currentPage ? `active` : ``}>
+            <Link to={num === 1 ? `/posts` : `/posts/page/${num}`}>{num}</Link>
           </li>
         ))}
         {!isLast && (

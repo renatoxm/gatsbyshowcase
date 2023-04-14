@@ -1,14 +1,15 @@
-import React, { ReactNode } from "react"
-import Header from './Header';
-import Footer from './Footer';
-import ScrollToTop from '../components/ScrollToTop';
+import * as React from 'react'
+import Header from './Header'
+import Footer from './Footer'
+import ScrollToTop from '../components/ScrollToTop'
 import '../assets/scss/index.scss'
 
 interface LayoutProps {
-  dark?: boolean;
-  children?: ReactNode;
+  dark?: boolean
+  children?: React.ReactNode
 }
 
+// eslint-disable-next-line no-undef
 const Layout = ({ children, dark }: LayoutProps): JSX.Element => {
   return (
     <>
@@ -21,7 +22,7 @@ const Layout = ({ children, dark }: LayoutProps): JSX.Element => {
       {/* End Back To Top */}
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { Post } from '../types'
 
 const SearchComponent = () => {
-  const [query, setQuery] = useState<string>('')
+  const [query, setQuery] = useState<string>(``)
   const [searchResults, setSearchResults] = useState<Post[]>([])
   const { allMdx } = useStaticQuery(
     graphql`
@@ -38,16 +38,16 @@ const SearchComponent = () => {
     date: node.frontmatter.date,
   }))
 
-  const searchIndex = new Search('id')
-  searchIndex.addIndex('title')
-  searchIndex.addIndex('excerpt')
-  searchIndex.addIndex('body')
+  const searchIndex = new Search(`id`)
+  searchIndex.addIndex(`title`)
+  searchIndex.addIndex(`excerpt`)
+  searchIndex.addIndex(`body`)
   searchIndex.addDocuments(data)
 
   const search = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target
     setQuery(value)
-    if (value === '') {
+    if (value === ``) {
       setSearchResults([])
     } else {
       const results = searchIndex.search(value)
@@ -80,8 +80,8 @@ const SearchComponent = () => {
             </div>
           </form>
           {searchResults.map((result: Post) => (
-            <Link to={result.slug}>
-              <div key={result.id} className="mb-5">
+            <Link key={result.id} to={result.slug}>
+              <div className="mb-5">
                 <h3>{result.title}</h3>
                 {result.excerpt}
               </div>

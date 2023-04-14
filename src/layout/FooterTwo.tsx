@@ -8,13 +8,13 @@ import {
 } from 'react-icons/fa'
 
 const SocialShare = [
-  { Social: <FaFacebookF />, link: 'https://www.facebook.com/' },
-  { Social: <FaLinkedinIn />, link: 'https://www.linkedin.com/' },
-  { Social: <FaInstagram />, link: 'https://www.instagram.com/' },
-  { Social: <FaTwitter />, link: 'https://twitter.com/' },
+  { Social: <FaFacebookF />, link: `https://www.facebook.com/` },
+  { Social: <FaLinkedinIn />, link: `https://www.linkedin.com/` },
+  { Social: <FaInstagram />, link: `https://www.instagram.com/` },
+  { Social: <FaTwitter />, link: `https://twitter.com/` },
 ]
 
-const FooterTwo = () => {
+const FooterTwo: React.FC = () => {
   return (
     <div
       className="footer-style-2 ptb--30 bg_image bg_image--1"
@@ -46,9 +46,13 @@ const FooterTwo = () => {
             <div className="inner text-lg-right text-center mt_md--20 mt_sm--20">
               <div className="text">
                 <p>
-                  {' '}
-                  This is a Showcase Project from{' '}
-                  <a href="https://renato.digital" target="_blank">
+                  {` `}
+                  This is a Showcase Project from{` `}
+                  <a
+                    href="https://renato.digital"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Renato Nabinger.
                   </a>
                 </p>
