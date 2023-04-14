@@ -23,9 +23,13 @@ This project was created only as a portfolio showcase, just the landing page wor
 - [x] Path Mapping — Import components or images using the `@` prefix
 - [x] Pnpm
 - [x] PR Workflow — Run Type Check & Linters on Pull Requests
-- [ ] Jest unit testing <https://www.gatsbyjs.com/docs/how-to/testing/unit-testing/>
-- [ ] Cypress
-- [ ] DataDog
+
+## Testing / Observability
+
+- [x] Jest - JavaScript testing framework
+- [ ] Cypress - e2e (end to end) testing
+- [ ] Storybook - UI development, testing, and documentation
+- [ ] DataDog -monitoring & security
 
 ## Gatsby Features
 
@@ -45,7 +49,7 @@ This project was created only as a portfolio showcase, just the landing page wor
 - `pnpm type-check` — Validate code using TypeScript compiler.
 - `pnpm lint` — Runs ESLint for all files in the `src` directory.
 - `pnpm format` — Runs Prettier for all files in the `src` directory.
-- `pnpm test` — Run tests with Vitest.
+- `pnpm test` — Run tests with Jest.
 - `pnpm test:watch` — Run tests on watch mode.
 
 ### Path Mapping
