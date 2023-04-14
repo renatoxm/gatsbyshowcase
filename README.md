@@ -17,10 +17,11 @@ This project was created only as a portfolio showcase, just the landing page wor
 - [x] Bootstrap 5
 - [x] ESLint
 - [x] Prettier — Code Formatter for consistent style
-- [ ] Jest unit testing <https://www.gatsbyjs.com/docs/how-to/testing/unit-testing/>
-- [ ] Husky
-- [ ] Commitlint
+- [x] Husky
+- [x] Commitlint
 - [ ] lint-staged
+- [ ] Jest unit testing <https://www.gatsbyjs.com/docs/how-to/testing/unit-testing/>
+- [ ] Cypress
 - [ ] DataDog
 
 ## Gatsby Features
