@@ -111,7 +111,12 @@ const IndexPage: React.FC<Props> = ({ data }) => {
 }
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => (
+  <>
+    <html lang="en" />
+    <title>Home Page</title>
+  </>
+)
 
 export const query = graphql`
   query {

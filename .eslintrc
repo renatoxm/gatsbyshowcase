@@ -10,17 +10,25 @@
   "env": {
     "browser": true,
     "es6": true,
-    "node": true
+    "node": true,
+    "cypress/globals": true
   },
-  "plugins": ["react", "jsx-a11y", "prettier", "@typescript-eslint"],
+  "plugins": ["react", "jsx-a11y", "prettier", "@typescript-eslint", "cypress"],
   "extends": [
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
+    "plugin:cypress/recommended",
     "standard",
     "plugin:prettier/recommended"
   ],
   "rules": {
+    "cypress/no-assigning-return-values": "error",
+    "cypress/no-unnecessary-waiting": "error",
+    "cypress/assertion-before-screenshot": "warn",
+    "cypress/no-force": "warn",
+    "cypress/no-async-tests": "error",
+    "cypress/no-pause": "error",
     "prettier/prettier": "error",
     "react/prop-types": "off",
     "react/jsx-filename-extension": "off",

@@ -14,7 +14,7 @@ const Layout = ({ children, dark }: LayoutProps): JSX.Element => {
   return (
     <>
       <Header />
-      {children}
+      <main>{children}</main>
       {/* Start Back To Top */}
       <div className="backto-top">
         <ScrollToTop dark={dark} />

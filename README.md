@@ -28,7 +28,7 @@ This project was created only as a portfolio showcase, just the landing page wor
 
 - [x] Jest - JavaScript testing framework
 - [x] Cypress - e2e (end to end) testing
-- [ ] Cypress axe accessibility testing API
+- [x] Cypress axe accessibility testing API
 - [ ] Storybook - UI development, testing, and documentation
 - [ ] DataDog -monitoring & security
 
@@ -137,3 +137,5 @@ Press CTRL+O to save, then press Enter to confirm. Finally, press CTRL+X to clos
 ```sh
 pnpm cy:open
 ```
+
+**Important**: Do not forget to run Xlaunch before running cypress!
