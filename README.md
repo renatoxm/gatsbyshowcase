@@ -29,8 +29,8 @@ This project was created only as a portfolio showcase, just the landing page wor
 - [x] Jest - JavaScript testing framework
 - [x] Cypress - e2e (end to end) testing
 - [x] Cypress axe accessibility testing API
+- [x] DataDog -Datadog logging and real user monitoring (RUM) <https://www.gatsbyjs.com/plugins/gatsby-plugin-datadog/>
 - [ ] Storybook - UI development, testing, and documentation
-- [ ] DataDog -monitoring & security
 
 ## Gatsby Features
 

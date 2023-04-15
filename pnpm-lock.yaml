@@ -34,6 +34,7 @@ specifiers:
   eslint-plugin-react-hooks: ^4.6.0
   formik: ^2.2.9
   gatsby: ^5.8.0
+  gatsby-plugin-datadog: ^1.1.1
   gatsby-plugin-image: ^3.8.0
   gatsby-plugin-manifest: ^5.8.0
   gatsby-plugin-mdx: ^5.8.0
@@ -71,6 +72,7 @@ dependencies:
   bootstrap: 5.2.3
   formik: 2.2.9_react@18.2.0
   gatsby: 5.8.1_2e45v5snrxhxxj6zpu56o774dy
+  gatsby-plugin-datadog: 1.1.1
   gatsby-plugin-image: 3.8.0_dl3shhjdvfxgbj3ixavxoyzu2e
   gatsby-plugin-manifest: 5.8.0_gatsby@5.8.1
   gatsby-plugin-mdx: 5.8.0_psam2whayzus5dbrcxjsjhltlm
@@ -2623,6 +2625,41 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@datadog/browser-core/4.39.0:
+    resolution: {integrity: sha512-jSwXfdSPaeU9xFLepour7d2jATk/VVcjab69/42gmWkh1MtzDloTd8RaKSVRo0Y7CsHroO6Mdzp+enEivI7NkA==}
+    dev: false
+
+  /@datadog/browser-logs/4.39.0_gy2au34liqcyv5zp3g5ia2soju:
+    resolution: {integrity: sha512-MKnfIMek2uL4WzVrBoqQdAKMlgMdMZKNa8PxBiBD5/5J9uFxVFTnFnMeZMEGRMMK3U48+dGW/+xCuXToNPMZMw==}
+    peerDependencies:
+      '@datadog/browser-rum': 4.39.0
+    peerDependenciesMeta:
+      '@datadog/browser-rum':
+        optional: true
+    dependencies:
+      '@datadog/browser-core': 4.39.0
+      '@datadog/browser-rum': 4.39.0_dvujplyss5u2ep42sqp7h4snii
+    dev: false
+
+  /@datadog/browser-rum-core/4.39.0:
+    resolution: {integrity: sha512-UhAEELzt7ZQlAbWSaMJ7Ubwfdxk+uig8xm39iktNyTNCcxN92aNHWsNhsz5FtWXe3Oci7xKSDZf3ccjFl7KABw==}
+    dependencies:
+      '@datadog/browser-core': 4.39.0
+    dev: false
+
+  /@datadog/browser-rum/4.39.0_dvujplyss5u2ep42sqp7h4snii:
+    resolution: {integrity: sha512-7owNySSTxWnNbwRjDCC+fHRU2ycWb3lPDGn+VvQE3US+o9MRlEbFesaLO5/3Nj0A+vJGq6Ao35d++eCHl5dw2Q==}
+    peerDependencies:
+      '@datadog/browser-logs': 4.39.0
+    peerDependenciesMeta:
+      '@datadog/browser-logs':
+        optional: true
+    dependencies:
+      '@datadog/browser-core': 4.39.0
+      '@datadog/browser-logs': 4.39.0_gy2au34liqcyv5zp3g5ia2soju
+      '@datadog/browser-rum-core': 4.39.0
+    dev: false
 
   /@eslint-community/eslint-utils/4.4.0_eslint@8.38.0:
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==}
@@ -8515,6 +8552,13 @@ packages:
       '@parcel/runtime-js': 2.8.3_@parcel+core@2.8.3
       '@parcel/transformer-js': 2.8.3_@parcel+core@2.8.3
       '@parcel/transformer-json': 2.8.3_@parcel+core@2.8.3
+    dev: false
+
+  /gatsby-plugin-datadog/1.1.1:
+    resolution: {integrity: sha512-pmXwc5i7ObMpYj+POSD24+49Myqd1O9MtNnZfN7Kf7rdjDzF2bAelBf4Jqqzl3dGWtbRzwkAkDXdECmGnX5bEw==}
+    dependencies:
+      '@datadog/browser-logs': 4.39.0_gy2au34liqcyv5zp3g5ia2soju
+      '@datadog/browser-rum': 4.39.0_dvujplyss5u2ep42sqp7h4snii
     dev: false
 
   /gatsby-plugin-image/3.8.0_dl3shhjdvfxgbj3ixavxoyzu2e:
