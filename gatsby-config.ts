@@ -76,7 +76,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-datadog`,
       options: {
-        site: `ddog-gov.com`,
+        site: process.env.DATADOGSITE,
         sampleRate: 100,
         enabled: !IS_DEV,
         rum: {
