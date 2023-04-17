@@ -16,16 +16,13 @@ This project was created only as a portfolio showcase, just the landing page wor
 - [x] TypeScript
 - [x] Bootstrap 5
 - [x] ESLint
-- [x] Prettier — Code Formatter for consistent style
+- [x] Prettier
 - [x] Husky
 - [x] Commitlint
 - [x] lint-staged
 - [x] Path Mapping — Import components or images using the `@` prefix
 - [x] Pnpm
 - [x] PR Workflow — Run Type Check & Linters on Pull Requests
-
-## Testing / Observability
-
 - [x] Jest - JavaScript testing framework
 - [x] Cypress - e2e (end to end) testing
 - [x] Cypress axe accessibility testing API
@@ -80,6 +77,42 @@ pnpm develop
 ```
 
 Open `http://localhost:8000` with your browser to see the result.
+
+## Datadog
+
+Gatsby plugin datadog is installed, read more on <https://www.gatsbyjs.com/plugins/gatsby-plugin-datadog/>
+
+Copy ./.env.production.example to ./.env.production and fill your App id, client token and datadog region site.
+
+```sh
+cp ./.env.production.example ./.env.production
+```
+
+### Logs & error collection
+
+When log collection is enabled datadogLogs will be available on the global window object, so you can use it like this:
+
+```js
+datadogLogs.logger.info('Hello World!')
+```
+
+See [Datadog’s Browser Log Collection documentation](https://docs.datadoghq.com/logs/log_collection/javascript/#usage) for available methods on the datadogLogs object.
+
+If RUM is enabled, RUM data will automatically be collected. datadogRum is also available on the global window object, so you can use it for [manual error collection](https://docs.datadoghq.com/real_user_monitoring/browser/collecting_browser_errors/?tab=npm#collect-errors-manually) and [custom user actions](https://docs.datadoghq.com/real_user_monitoring/browser/tracking_user_actions/?tab=npm#custom-user-actions), etc.
+
+### Agent installation (ubuntu)
+
+<https://www.devopsschool.com/blog/how-to-install-datadog-agent-in-ubuntu/>
+
+### Starting/stopping Datadog agent (ubuntu)
+
+```sh
+#starting
+sudo service datadog-agent start
+
+#stopping
+sudo service datadog-agent stop
+```
 
 ## Running Cypress on WSL2
 

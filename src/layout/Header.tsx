@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { FiX, FiMenu } from 'react-icons/fi'
 import { Link } from 'gatsby'
+import { datadogLogs } from '@datadog/browser-logs'
 
 interface HeaderProps {
   logo?: string
@@ -17,6 +18,7 @@ class Header extends React.Component<HeaderProps> {
     if (isBrowser) {
       window.addEventListener(`load`, function () {
         console.log(`All assets are loaded`)
+        datadogLogs.logger.info(`Hello World!`)
       })
     }
   }

@@ -67,22 +67,6 @@ const Testimonial: React.FC = () => {
       country: `Romania`,
       text: `Adipisicing duis voluptate Lorem irure adipisicing excepteur minim laborum pariatur elit.`,
     },
-    {
-      id: 9,
-      name: `Cara Golden`,
-      email: `caragolden@glukgluk.com`,
-      company: `Isostream`,
-      country: `Somalia`,
-      text: `Consectetur ex ullamco sit do aliqua magna consectetur Lorem minim et commodo.`,
-    },
-    {
-      id: 10,
-      name: `Kellie Gamble`,
-      email: `kelliegamble@isostream.com`,
-      company: `Vertide`,
-      country: `Czech Republic`,
-      text: `Ullamco ad exercitation nisi dolore voluptate commodo non exercitation occaecat.`,
-    },
   ]
 
   return (

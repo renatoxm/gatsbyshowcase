@@ -10,6 +10,7 @@ import Counter from '../components/Counter'
 import Testimonial from '../components/Testimonial'
 import Portfolio from '../components/Portfolio'
 import BlogList from '../components/BlogList'
+import { datadogLogs } from '@datadog/browser-logs'
 
 interface BlogPost {
   id: string
@@ -35,6 +36,7 @@ interface Props {
 }
 
 const IndexPage: React.FC<Props> = ({ data }) => {
+  datadogLogs.logger.info(`datadog, sit!`)
   return (
     <div className="active-dark">
       <Layout dark={true}>

@@ -1,12 +1,12 @@
-const { compilerOptions } = require('./tsconfig.json')
-const { pathsToModuleNameMapper } = require('ts-jest')
+const { compilerOptions } = require(`./tsconfig.json`)
+const { pathsToModuleNameMapper } = require(`ts-jest`)
 const paths = pathsToModuleNameMapper(compilerOptions.paths, {
-  prefix: '<rootDir>/',
+  prefix: `<rootDir>/`,
 })
 
 module.exports = {
   transform: {
-    '^.+\\.[jt]sx?$': '<rootDir>/jest-preprocess.js',
+    '^.+\\.[jt]sx?$': `<rootDir>/jest-preprocess.js`,
   },
   moduleNameMapper: {
     '.+\\.(css|styl|less|sass|scss)$': `identity-obj-proxy`,

@@ -10,12 +10,12 @@ const About: React.FC = () => {
         <div className="container">
           <div className="row row--35 align-items-center">
             <div className="col-lg-5 col-md-12">
-              <div className="thumbnail">
+              <div data-testid="about-image" className="thumbnail">
                 <StaticImage
                   className="w-100"
                   placeholder="blurred"
                   src="../images/about/about-1.jpg"
-                  alt="About Images"
+                  alt="Snow mountain"
                 />
               </div>
             </div>

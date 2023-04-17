@@ -78,7 +78,8 @@ const config: GatsbyConfig = {
       options: {
         site: process.env.DATADOGSITE,
         sampleRate: 100,
-        enabled: !IS_DEV,
+        // enabled: !IS_DEV,
+        enabled: true,
         rum: {
           applicationId: process.env.DATADOGAPPID,
           clientToken: process.env.DATADOGCLIENTOKEN,
