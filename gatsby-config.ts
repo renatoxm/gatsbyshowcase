@@ -3,8 +3,8 @@ require(`dotenv`).config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-let IS_DEV = false
-if (process.env.NODE_ENV === `development`) IS_DEV = true
+// let IS_DEV = false
+// if (process.env.NODE_ENV === `development`) IS_DEV = true
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -15,6 +15,9 @@ const config: GatsbyConfig = {
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
+  flags: {
+    DEV_SSR: true,
+  },
   plugins: [
     `gatsby-plugin-pnpm`,
     `gatsby-plugin-sass`,

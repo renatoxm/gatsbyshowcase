@@ -36,7 +36,10 @@ interface Props {
 }
 
 const IndexPage: React.FC<Props> = ({ data }) => {
-  datadogLogs.logger.info(`datadog, sit!`)
+  if (typeof window !== `undefined`) {
+    datadogLogs.logger.info(`datadog, sit!`)
+  }
+
   return (
     <div className="active-dark">
       <Layout dark={true}>
